@@ -23,5 +23,9 @@ namespace Builder
         {
             return $"{Type}, {Resolution}, {RefreshRateHz} Гц";
         }
+        public ScreenPanel Clone()
+        {
+            return new ScreenPanel(Type, Resolution, RefreshRateHz);
+        }
     }
 }

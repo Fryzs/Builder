@@ -37,5 +37,13 @@ namespace Builder
 
             return "ергономічна: " + string.Join(", ", options);
         }
+        public StandSpec Clone()
+        {
+            return new StandSpec(
+                HeightAdjustable,
+                TiltAdjustable,
+                SwivelAdjustable,
+                PivotSupport);
+        }
     }
 }

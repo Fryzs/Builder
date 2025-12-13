@@ -32,5 +32,9 @@ namespace Builder
 
             return string.Join(", ", list);
         }
+        public SoundSystem Clone()
+        {
+            return new SoundSystem(HasSpeakers, PowerWatts, HasHeadphoneJack);
+        }
     }
 }

@@ -21,6 +21,10 @@ namespace Builder
         {
             return $"{Type} x{Count}";
         }
+        public Port Clone()
+        {
+            return new Port(Type, Count);
+        }
     }
 
 }

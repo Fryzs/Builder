@@ -24,6 +24,9 @@ namespace Builder
             var hdr = HasHDR ? "з HDR" : "без HDR";
             return $"{Type}, {BrightnessNits} ніт, {hdr}";
         }
-
+        public Backlight Clone()
+        {
+            return new Backlight(Type, HasHDR, BrightnessNits);
+        }
     }
 }

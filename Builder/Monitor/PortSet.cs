@@ -28,5 +28,14 @@ namespace Builder
 
             return string.Join(", ", list);
         }
+        public PortSet Clone()
+        {
+            var copy = new PortSet();
+            foreach (var port in ports)
+            {
+                copy.AddPort(port.Clone());
+            }
+            return copy;
+        }
     }
 }

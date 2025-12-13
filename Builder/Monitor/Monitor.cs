@@ -29,6 +29,19 @@ namespace Builder
 
             return sb.ToString();
         }
+        public Monitor Clone()
+        {
+            return new Monitor
+            {
+                Model = this.Model,
+                DiagonalInches = this.DiagonalInches,
+                Panel = this.Panel?.Clone(),
+                Stand = this.Stand?.Clone(),
+                Ports = this.Ports?.Clone(),
+                Sound = this.Sound?.Clone(),
+                Backlight = this.Backlight?.Clone()
+            };
+        }
     }
 
 }
